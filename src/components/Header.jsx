@@ -13,10 +13,6 @@ const Header = () => {
                     </div>
                 </Link>
                 <NavList/>
-                <div className="header-btn-box nav-item d-flex flex-row justify-content-end align-items-center">
-                        <Link to="/register">Register</Link>
-                        <Link to="/signin">Sign in</Link>
-                </div>
             </div>
         </div>
 
