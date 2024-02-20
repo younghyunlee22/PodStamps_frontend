@@ -6,7 +6,6 @@ const linkData = [
     { name: "All PodStamps", linkTo: "/allpodstamps" },
     { name: "My PodStamps", linkTo: "/mypodstamps" },
     { name: "Quick Save", linkTo: "/quicksave" },
-    { name: "Sign In", linkTo: "/signin" },
 ];
 
 const NavList = () => {

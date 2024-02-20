@@ -34,11 +34,6 @@ a:hover {
   color: #A1C445;
 }
 
-main {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 ul {
   padding: 0;
   margin: 0;
@@ -98,10 +93,12 @@ input:focus {
 .nav-box {
   background-color: #FFFEF0;
   padding: 15px;
+  height: 100px;
+  width: 100vw;
 }
 .nav-box .container {
-  width: 1170px;
-  padding: 15px;
+  width: 98%;
+  padding: 5px;
   border-radius: 10px;
   background: #d8ffd8;
   box-shadow: 0px 4px 15px 0px darkolivegreen;
@@ -109,6 +106,7 @@ input:focus {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
+  justify-content: space-between;
 }
 .nav-box .container .header-logo-box h1 {
   font-weight: 600;
