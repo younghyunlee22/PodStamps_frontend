@@ -3,7 +3,7 @@ import "./App.scss";
 import Header from "./components/Header.jsx";
 import Home from "./pages/Home";
 import Listen from "./pages/Listen.jsx";
-import Login from "./pages/Login.jsx";
+import SignIn from "./pages/SignIn.jsx";
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
                 {/*page routing*/}
                 <Route path="/" element={<Home/>}/>
                 <Route path="/listen" element={<Listen/>}/>
-                <Route path="/signin" element={<Login/>}/>
+                <Route path="/signin" element={<SignIn/>}/>
 
             </Routes>
         </>
