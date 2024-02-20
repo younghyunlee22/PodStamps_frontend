@@ -1,22 +1,36 @@
-import { Link } from "react-router-dom";
+import  { useNavigate } from "react-router-dom";
+
+const linkData = [
+    { name: "Home", linkTo: "/" },
+    { name: "Listen", linkTo: "/listen" },
+    { name: "All PodStamps", linkTo: "/allpodstamps" },
+    { name: "My PodStamps", linkTo: "/mypodstamps" },
+    { name: "Quick Save", linkTo: "/quicksave" },
+    { name: "Contact", linkTo: "/contact" },
+];
 
 const NavList = () => {
-    console.log("move to the home page")
+    const navigate = useNavigate();
     return (
-        <div className="nav-list">
-            <Link to="/listen">
-                <p>Listen</p>
-            </Link>
-            <Link to="/allpodstamps">
-                <p>All PodStamps</p>
-            </Link>
-            <Link to="/mypodstamps">
-                <p>My PodStamps</p>
-            </Link>
-            <Link to="/quicksave">
-                <p>Quick Save</p>
-            </Link>
-        </div>
+
+        <ul
+            className="d-flex flex-row justify-content-between align-items-center"
+            style={{margin: "0 1vw"}}
+        >
+            {linkData.map((data, i) => (
+                <li className="nav-item" key={i}>
+                    <button
+                        className="nav-link btn-primary"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate(data.linkTo);
+                        }}
+                    >
+                        {data.name}
+                    </button>
+                </li>
+            ))}
+        </ul>
     );
 }
 
