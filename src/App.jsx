@@ -8,16 +8,15 @@ import SignIn from "./pages/SignIn.jsx";
 function App() {
 
     return (
-        <>
+        <div style={{width:"100%"}}>
             <Header/>
             <Routes>
                 {/*page routing*/}
                 <Route path="/" element={<Home/>}/>
                 <Route path="/listen" element={<Listen/>}/>
                 <Route path="/signin" element={<SignIn/>}/>
-
             </Routes>
-        </>
+        </div>
     );
 }
 
