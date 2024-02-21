@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SpotifyPlayer from "../components/SpotifyPlayer.jsx";
-import useEpisodeInfo from "./useEpisodeInfo"; // Updated import
+import useEpisodeInfo from "../hooks/useEpisodeInfo.jsx"; // Updated import
 
 
 const Listen = () => {
