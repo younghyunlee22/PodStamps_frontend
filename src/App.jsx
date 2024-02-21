@@ -4,7 +4,9 @@ import Header from "./components/Header.jsx";
 import Home from "./pages/Home";
 import Listen from "./pages/Listen.jsx";
 import SignIn from "./pages/SignIn.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 
+const code = new URLSearchParams(window.location.search).get("code");
 function App() {
 
     return (
@@ -16,6 +18,7 @@ function App() {
                 <Route path="/listen" element={<Listen/>}/>
                 <Route path="/signin" element={<SignIn/>}/>
             </Routes>
+            {code ? <Dashboard code={code}/> : <SignIn/>}
         </div>
     );
 }
