@@ -56,11 +56,13 @@ ul {
   list-style: none;
 }
 
-input {
+input, textarea {
   font-size: $font-small;
   border: none;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 70%;
 
   &:focus {
     outline: 2px solid $color-dark-green;

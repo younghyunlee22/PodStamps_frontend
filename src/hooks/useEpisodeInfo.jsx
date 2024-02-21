@@ -14,7 +14,7 @@ const useEpisodeInfo = (link) => {
                     `https://api.spotify.com/v1/episodes/${spotifyId}?market=US`,
                     {
                         headers: {
-                            Authorization: 'Bearer BQBEMeJldGZCmgiV-7Ub7bB5x4mVuD1x9v-_oBWVaP6tlXDIo8A94eIfzOpfTZAozbgI2HKHdsXSOiUej2FwYkNwsFS6PpVart_X9TVBZ24iz8cs-W4',
+                            Authorization: 'Bearer ',
                         },
                     }
                 );

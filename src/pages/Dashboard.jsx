@@ -66,6 +66,7 @@ const Dashboard = ({ code }) => {
                 type="search"
                 placeholder="Search Show/Episode"
                 value={search}
+                style={{ width: "80%" }}
                 onChange={e => setSearch(e.target.value)}
             />
             <div className="flex-grow-1 my-2" style={{overflowY: "auto"}}>
