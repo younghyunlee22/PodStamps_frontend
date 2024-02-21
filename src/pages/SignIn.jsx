@@ -2,11 +2,13 @@
 import SpotifyLogo from '../../public/images/spotifylogo.svg';
 // import svg as a react component
 // import SpotifyLogoSvg from '../../public/images/spotifylogo.svg?react'
+import useAuth from "../hooks/useAuth.js";
 
 const clientId = import.meta.env.VITE_REACT_APP_CLIENT_ID;
 const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=code&redirect_uri=http://localhost:5173/&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state%20user-read-playback-position`;
 
-const SignIn = () => {
+const SignIn = ({code}) => {
+    const accessToken = useAuth(code);
     return (
         <div style={{
             display: "flex",
