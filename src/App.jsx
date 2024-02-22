@@ -10,7 +10,6 @@ import EmbedLinks from "./components/EmbedLinks.jsx";
 
 const code = new URLSearchParams(window.location.search).get("code");
 function App() {
-    console.log('code', code);
     return (
         <div style={{width:"100%"}}>
             <Header/>

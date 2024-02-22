@@ -6,8 +6,6 @@ export default function useAuth(code) {
     const [refreshToken, setRefreshToken] = useState();
     const [expiresIn, setExpiresIn] = useState();
 
-    console.log("code:", code);
-
     useEffect(() => {
         let ignore = false;
         console.log("ignore", ignore);
@@ -17,7 +15,6 @@ export default function useAuth(code) {
                     code,
                 })
                 .then((res) => {
-                    console.log("line 20");
                     setAccessToken(res.data.accessToken);
                     setRefreshToken(res.data.refreshToken);
                     setExpiresIn(res.data.expiresIn);
@@ -31,8 +28,6 @@ export default function useAuth(code) {
                     window.history.pushState({}, null, "/");
                 })
                 .catch((err) => {
-                    // redirect the user to the home page
-                    // window.location = "/";
                     window.history.pushState({}, null, "/");
                     console.log(err);
                 });

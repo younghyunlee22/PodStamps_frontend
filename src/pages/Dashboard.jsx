@@ -10,7 +10,6 @@ const spotifyApi = new SpotifyWebApi({
 
 const Dashboard = ({ code }) => {
     const accessToken = useAuth(code);
-    console.log('accessToken', accessToken);
     const [search, setSearch] = useState("")
     const [searchResults, setSearchResults] = useState([])
 
@@ -62,19 +61,19 @@ const Dashboard = ({ code }) => {
             height: "80vh",
             width: "80wh"
         }}>
+            <h1>Search Shows</h1>
             <Form.Control
                 type="search"
-                placeholder="Search Show/Episode"
+                placeholder="Search Shows"
                 value={search}
                 style={{ width: "80%" }}
                 onChange={e => setSearch(e.target.value)}
             />
             <div className="flex-grow-1 my-2" style={{overflowY: "auto"}}>
-                {searchResults.map(track => (
+                {searchResults.map(show => (
                     <EpisodeSearchResult
-                        track={track}
-                        key={track.uri}
-                        // chooseTrack={chooseTrack}
+                        show={show}
+                        key={show.uri}
                     />
                 ))}
             </div>

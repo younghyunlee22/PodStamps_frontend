@@ -26,7 +26,7 @@ const EmbedLinks = () => {
 
     return (
         <div>
-            <h2>Embed Links</h2>
+            <h2>Play your PodStamps</h2>
             {embedLinks.map((link, index) => (
                 <SpotifyPlayer key={index} link={link} />
             ))}
