@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useEpisodeInfo = (link) => {
+const useEpisodeInfo = (link, accessToken) => {
     const [episodeInfo, setEpisodeInfo] = useState(null);
 
     useEffect(() => {
@@ -14,7 +14,7 @@ const useEpisodeInfo = (link) => {
                     `https://api.spotify.com/v1/episodes/${spotifyId}?market=US`,
                     {
                         headers: {
-                            Authorization: 'Bearer ',
+                            Authorization: 'Bearer ' + accessToken,
                         },
                     }
                 );
