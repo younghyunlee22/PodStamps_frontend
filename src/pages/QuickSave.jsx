@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import QuickSaveForm from '../components/QuickSaveForm';
-import SpotifyPlayer from '../components/SpotifyPlayer';
+import { useState } from "react";
+import QuickSaveForm from "../components/QuickSaveForm";
+import SpotifyPlayer from "../components/SpotifyPlayer";
 export default function QuickSave() {
-    const [embedLink, setEmbedLink] = useState('');
+  const [embedLink, setEmbedLink] = useState("");
 
-    // Callback function to set the embed link
-    const handleEmbedLink = (link) => {
-        setEmbedLink(link);
-    };
+  // Callback function to set the embed link
+  const handleEmbedLink = (link) => {
+    setEmbedLink(link);
+  };
 
-    return (
-        <div>
-            <h1>QuickSave</h1>
-            <QuickSaveForm onEmbedLink={handleEmbedLink} />
-            {embedLink && <SpotifyPlayer link={embedLink} />}
-        </div>
-    );
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1 style={{ paddingBottom: "20px" }}>QuickSave</h1>
+      <QuickSaveForm onEmbedLink={handleEmbedLink} />
+      {embedLink && <SpotifyPlayer link={embedLink} />}
+    </div>
+  );
 }
