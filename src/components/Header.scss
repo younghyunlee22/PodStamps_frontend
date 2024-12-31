@@ -4,7 +4,9 @@
     background-color: $background-color-beige;
     padding: 15px;
     height: 100px;
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .container {
         width: 98%;
@@ -19,6 +21,7 @@
         justify-content: space-between;
 
         .header-logo-box {
+            padding-left: 10px;
             h1 {
                 font-weight: 600;
                 font-size: 20px;
@@ -48,9 +51,6 @@
                     color: $color-purple;
                 }
             }
-
-            //.header-btn-box will be used later
-
         }
     }
 }
